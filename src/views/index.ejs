@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        <section class="cardList">
+
+            <% for( let i = 0; i < notas.length; i++ ) { %>
+                <a href="/notas/detail/<%= notas[i].id %>" class="card">
+                    <h2><%= notas[i].titulo %></h2>
+                    <div class="texto_nota"><%= notas.texto %> </div>
+                </a>
+            <% } %>
+
+        </section>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>

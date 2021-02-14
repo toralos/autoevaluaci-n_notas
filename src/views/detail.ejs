@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+    <main>
+        <section class="notaDetail">
+            <h1><%= notas.titulo %></h1>
+            <div class="contenidoNota">
+                <div><%= notas.texto %></div>
+            </div>
+            
+            <div class="controls">
+                <a style="cursor:pointer" href="/notas/edit/<%= notas.id %>"><button>Editar</button></a>
+                <form action="/notas/delete/<%= notas.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Borrar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %> 
+</body>
+</html>
